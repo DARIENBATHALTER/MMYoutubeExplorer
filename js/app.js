@@ -1045,6 +1045,15 @@ class ArchiveExplorer {
             const dataManagerFilters = { ...filters };
             delete dataManagerFilters.keyword;
             
+            // Also remove the keyword:"..." syntax from search if present
+            if (dataManagerFilters.search && dataManagerFilters.search.startsWith('keyword:"')) {
+                console.log('🔍 Clearing keyword syntax from search:', dataManagerFilters.search);
+                dataManagerFilters.search = ''; // Clear search when using keyword filter
+            }
+            
+            console.log('🔍 DataManager filters:', dataManagerFilters);
+            console.log('🔍 Current filters (with keyword):', this.currentFilters);
+            
             // Add list view sorting to filters
             if (this.isListView) {
                 // Map list view sort fields to DataManager format
