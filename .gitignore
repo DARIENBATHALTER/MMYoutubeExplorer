@@ -40,7 +40,5 @@ __pycache__/
 server.log 
 
 # Keep videos.json and video-mapping.json (smaller files)
-data/comments.json
-data/search_index.json  
-data/video_comments_index.json
-data/word_freq_index.json
+# Note: comments.json, search_index.json, video_comments_index.json, and word_freq_index.json 
+# are now included as they are required for the application to function
