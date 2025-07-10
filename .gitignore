@@ -1,6 +1,7 @@
 # Exclude user's local video files
 YouTube_Downloads/
 YouTube_Downloads.zip
+MM_YT_archive/
 
 # Exclude other social media apps (removed from YouTube-only version)
 othersocials/
